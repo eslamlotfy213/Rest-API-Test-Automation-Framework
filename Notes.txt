@@ -1,0 +1,136 @@
+-----------json file----------------------------------
+{
+    "userEmail": "dexcomnew98@gmail.com",
+    "userPassword": "User123#"
+}
+
+--------------------java file------------------------
+public class Loginrequest {
+
+    private String userEmail;
+    private  String userPassword;
+
+}
+  Loginrequest login = new Loginrequest();
+  
+###############################################################################################################################################
+---------------------json file-----------------------
+{
+    "orders": 
+	[
+        {
+            "country": "Egypt",
+            "productOrderedId": "{{productId}}"
+        }
+    ]
+}
+--------------------java file------------------------
+   public class ordersrequestDetails {
+		private String country;
+		private  String productOrderedId;
+	}
+	
+   
+  public class orderarray {
+    private List<ordersrequestDetails> orders;
+}
+
+   ordersrequestDetails ordersdetails = new ordersrequestDetails();
+     ordersdetails.setCountry("Egypt");
+     ordersdetails.setProductOrderedId(addProductresponse.getProductId());
+
+
+   List<ordersrequestDetails> orderlist = new ArrayList<ordersrequestDetails>();
+	 orderlist.add(ordersdetails);
+   
+###############################################################################################################################################	
+--------------json File---------------------------------
+"courses":
+   { 
+       "webAutomation": 
+	   [ 
+            { 
+				"courseTitle": "Selenium Webdriver Java", 
+				 "price": "50" 
+		    }, 
+			{ 
+				 "courseTitle": "Cypress", 
+				 "price": "40"
+			},
+            {
+                "courseTitle": "Protractor",
+                "price": "40"
+            }
+        ],
+        "api": 
+		[
+            {
+                "courseTitle": "Rest Assured Automation using Java",
+                "price": "50"
+            },
+            {
+                "courseTitle": "SoapUI Webservices testing",
+                "price": "40"
+            }
+        ],
+        "mobile":
+		[
+            {
+                "courseTitle": "Appium-Mobile Automation using Java",
+                "price": "50"
+            }
+        ]
+    },
+--------------------java file------------------------
+	  public class WebAutomation 
+	  {
+		private  String courseTitle;
+		private String price;
+	  }
+
+	  public class Api 
+	   {
+			private  String courseTitle;
+			private String price;
+	   }
+
+	public class Mobile 
+	{
+
+		private  String courseTitle;
+		private String price;
+	}
+
+
+//will make list of api details , list of mobile details , list of webAutomation details
+	public class courses {
+
+		private List<WebAutomation> webAutomation;
+		private  List<Api> api;
+		private  List<Mobile> mobile;
+		
+		}
+###################################################################################################################################################################################################
+--------------json File---------------------------------
+{
+ "types": 
+    [
+        "shoe park",
+        "shop"
+    ]
+
+}
+
+--------------------java file------------------------
+    private List<String> types;
+	
+	List<String> t = new ArrayList<String>();
+	    List<String> t = new ArrayList<String>();
+        t.add("shoe park");
+        t.add("shop");
+        p.setTypes(t);
+
+
+
+
+

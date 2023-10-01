@@ -1,0 +1,208 @@
+Rest API Testing (Automation) from Scratch-Rest Assured Java
+client server 
+presentation layer +  UI 
+business logic layer application logic
+database layer    
+Understanding GET, POST, PUT DELETE Http Crud operations of API
+
+-----------------------------------------------------------------------------------------------------------
+Endpoint 
+BaseURL/recesourcs/(path-query)paramter
+install postman
+----------------------------------------------------------------------------------------------------------
+Rest assured 
+java based library used to test restful api / web services
+install java and set system variables
+install eclips create maven project
+configure rest assured jars into project
+
+-----steps------------------------------------------------------------------------------------------------------
+https://www.oracle.com/eg/java/technologies/downloads/
+Java SE Platform and JDK 17 LTS is the latest long-term support release for the Java SE platform.
+JDK 17 
+install java 17 version has long support
+programms files > java
+
+1.add JAVA_HOME : C:\Program Files\Java\jdk-18.0.1.1
+2.add into path   Edit > New and add then ok C:\Program Files\Java\jdk-18.0.1.1\bin
+CMD >  java -version
+
+install eclips editor code
+https://www.eclipse.org/downloads/  >  Download Packages  > https://www.eclipse.org/downloads/packages/
+
+install maven project
+<!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
+<dependency>
+    <groupId>io.rest-assured</groupId>
+    <artifactId>rest-assured</artifactId>
+    <version>5.3.2</version>
+    <scope>test</scope>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+<dependency>
+    <groupId>org.testng</groupId>
+    <artifactId>testng</artifactId>
+    <version>7.8.0</version>
+    <scope>test</scope>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/org.hamcrest/hamcrest -->
+<dependency>
+    <groupId>org.hamcrest</groupId>
+    <artifactId>hamcrest</artifactId>
+    <version>2.2</version>
+    <scope>test</scope>
+</dependency>
+
+
+----------------------------------------------------
+priciplaces"
+use it to import import static io.restassured.RestAssured.*;
+given when then
+
+
+give   > inputs queryparamter , body , header , 
+when   > resources  & http methods 
+then   > Validation response ,assertThat().statusCode(200).body("msg",equalTo("Address successfully updated"));
+
+import io.restassured.RestAssured;
+import static io.restassured.RestAssured.*;
+import static org.hamcrest.Matchers.equalTo;
+
+conver reponseo to string 
+conver string to json 
+----------------Example API------------------------
+- Google Maps API
+- Courses API
+- Library API
+-------------------dataProvider----------------
+1.create methods for dataprovider
+ @DataProvider(name = "BooksData")
+    public Object[][] getData()
+	{
+       return new Object[][]{{"abcd2","155"},{"jgfg","566"},{"bmbn","876"}};
+    }
+2.add @Test(dataProvider = "BooksData")
+3.add String str1, String str2
+-------------------Json File External----------------
+Dyanamic payload from static methods
+Dynamic methods existing body 
+
+1.have json files
+2.convert to bytes Files.bytes(path.url("................................"))
+2.Convert bytes to String  new String ( Files.bytes(path.url("................................")) )
+body(Files.readAllBytes(Paths.get("src/main/java/JsonFiles/Addbody.json")
+-------------------Real Example----------------
+- Setting up Jira API
+- Download Jira 
+- Get started 
+- Select release
+- orgainztion : eslamlotfy213
+BGNV-E2XM-WLMJ-4AQQ
+Your Jira instance can be accessed through any web browser if you enter this 
+address: http://localhost:8080/secure/WelcomeToJIRA.jspa.
+
+Link: http://localhost:8080/secure/RapidBoard.jspa?rapidView=1&projectKey=RSA&view=planning.nodetail&issueLimit=100#
+How to run server
+Search on google : REST APIs  : https://docs.atlassian.com/software/jira/docs/api/REST/9.7.2/#api/2/issue-createIssue
+Step 1. Create a new session using the Jira REST API : https://developer.atlassian.com/cloud/jira/platform/jira-rest-api-cookie-based-authentication/
+----------------------------------------------------
+create new project on jira
+get the key :RES
+important : 
+1. use it SessionFilter sessionFilter = new SessionFilter();
+2. use it filter(sessionFilter)
+-------------------------------------------------------
+.queryParam("key","qaclick123")
+.pathParam("id","10004")
+---------------add attachmet--------------------------------
+use .header("Content-Type","multipart/form-data")
+use .multiPart("file",new File("src/main/java/jira/file.txt")
+---------------------------------------------------------------
+urlEncodingEnabled(false)
+-> use to encoding
+---------------OAuth2.0----------------------------------------
+industrty protocl
+handle google/facebook oauth authorization grant types
+intergation between UI automation and restassured 
+
+1 get code from browser
+2 get access token 
+3 actual request
+
+https://rahulshettyacademy.com/getCourse.php?code=
+4%2F0AfJohXnxVN77jySNlI-ff1IA3VrxE7NpPr9fCalOQCpD_DW8WTYfSspP_c20Ee98h6dAUg
+&scope=email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=1&prompt=consent
+
+- splite the string
+- Login with gmail 
+
+-------------------------------------------------------------------------------------------------------------------
+authorization code  ->need more steps as human perform
+client credentials   ->no need more steps when application request own data
+----------------------------------serlization--------setter------------------------------------------------------------------
+converting java object into -> request json payload          
+
+----------------------------------deserlization---------getter--------------------------------------------------------------
+converting response into java object
+
+library used: 
+jaskon Datablind
+jaskon annotation
+jaskon core
+Gson
+
+using >> .expect().defaultParser(Parser.JSON)
+------------------------------------------------------------------------------------------------------------------------
+>      request spec builder 
+>      responce spec builder 
+serializarion 
+deserializarion 
+spec builder
+-----E2E ecommerce-----------------------------------------------------------------------------------------------------
+Website:https://rahulshettyacademy.com/client/dashboard/dash
+email : dexcomnew98@gmail.com
+pass : User123#
+
+URL : 
+Login
+Create product 
+pursgase order
+Delete order 
+Delete order
+
+----------------------------build framework---------------------------------------------------------------------
+RestAssured Testing 
+Serialization & Deserialization using POJO
+Request and Response spec Buidler
+Cucumber Framework
+Maven buikd managment tools basics
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
