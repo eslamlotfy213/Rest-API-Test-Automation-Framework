@@ -1,1 +1,10 @@
 "# Rest-API-Test-Automation-Framework" 
+
+CoursesAPI_Project_1
+jira_Project_2
+libraryApi_Project_3
+Google_oAuth2_Project_4
+E2E_Automation_Pojo_Project_5
+Serialization_Project_6
+specBuildTest_Project_7
+E2E_Ecommerce_Project_8
